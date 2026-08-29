@@ -163,7 +163,7 @@ body {
 @media only screen and (max-width: 768px) {
     #main-body {
         grid-template-columns: 1fr; /* Changes to a 1-column layout on phones */
-        padding: 50px 20px;
+        padding: 150px 20px;
     }
     
     #maps {
