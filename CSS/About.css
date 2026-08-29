@@ -1,0 +1,177 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* =========================================
+   MAIN GRID CONTAINER
+   ========================================= */
+#main-body {
+    background-image: url("../Content/img-art/silde-img3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    
+    /* ADDED GRID LAYOUT */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Creates 2 equal columns */
+    gap: 40px; /* Space between the boxes */
+    padding: 100px 5%; /* Puts space around the edges of the screen */
+    align-items: start; /* Keeps boxes from stretching vertically */
+}
+
+/* =========================================
+   TEXT BOXES
+   ========================================= */
+.aboutus1, .aboutus2 {
+    border-radius: 3em;
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+.aboutus1 {
+    background-color: aqua;
+}
+
+.aboutus2 {
+    background-color: #E80E48;
+    border-radius: 6em;
+}
+
+/* Common text styling */
+.aboutus1 h1, .aboutus2 h1 {
+    text-align: center;
+    font-family: cursive;
+    font-weight: bolder;
+}
+
+.aboutus1 h1 {
+    color: #E80E48;
+    text-shadow: -1px 0 rgb(0, 0, 0), 0 2px rgb(0, 0, 0), 1px 0 rgb(0, 0, 0), 0 -1px rgb(0, 0, 0);
+}
+
+.aboutus2 h1 {
+    color: #007786;
+    text-shadow: -1px 0 rgb(0, 0, 0), 0 2px rgb(0, 0, 0), 1px 0 rgb(0, 0, 0), 0 -1px rgb(0, 0, 0);
+}
+
+.aboutus1 p {
+    font-family: cursive;
+    font-weight: bolder;
+    color: #9D552F;
+    text-shadow: -1px 0 white, 0 2px white, 1px 0 white, 0 -1px white;
+}
+
+.aboutus2 p {
+    font-family: cursive;
+    font-weight: bolder;
+    color: #ffffff;
+    text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
+}
+
+.aboutus2 a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.aboutus2 a:hover {
+    transform: scale(1.1);
+    color: black;
+    text-shadow: -1px 0 white, 0 2px white, 1px 0 white, 0 -1px white;
+}
+
+/* =========================================
+   RESPONSIVE MAP SECTION
+   ========================================= */
+#maps {
+    grid-column: 1 / -1; /* Makes the map span entirely across both columns */
+    border: #ffffff solid 4px;
+    border-radius: 4em;
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto; /* Centers the map */
+    overflow: hidden; /* Keeps the map image nicely inside the rounded corners */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #000;
+}
+
+/* This creates a 16:9 aspect ratio box so it scales perfectly */
+.map-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    display: block;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevents the image from squishing */
+}
+
+#pin img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfectly centers the pin on the map */
+    width: 4em;
+    animation: pulse 0.7s infinite alternate;
+}
+
+.btn-wrapper {
+    position: absolute;
+    bottom: 30px;
+    z-index: 10;
+}
+
+#maps button {
+    cursor: pointer;
+    border-radius: 4em;
+    padding: 1em 4em;
+    font-family: cursive;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    background-color: #007786;
+    border: #ffffff solid 4px;
+    color: white;
+    transition: 0.3s;
+}
+
+#maps button:hover {
+    transform: scale(1.05);
+}
+
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    100% { transform: translate(-50%, -50%) scale(1.2); }
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+   ========================================= */
+@media only screen and (max-width: 768px) {
+    #main-body {
+        grid-template-columns: 1fr; /* Changes to a 1-column layout on phones */
+        padding: 50px 20px;
+    }
+    
+    #maps {
+        border-radius: 2em; /* Slightly smaller borders for small screens */
+    }
+    
+    #maps button {
+        padding: 1em 2em;
+        font-size: 1rem;
+    }
+}

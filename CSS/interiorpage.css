@@ -1,0 +1,125 @@
+/* =========================================
+   BASE CONTAINER & BODY
+   ========================================= */
+body {
+    background: wheat;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+#container {
+    /* REMOVED the massive 1000px padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 100px 20px; /* Safe padding that grows naturally */
+    box-sizing: border-box;
+}
+
+/* =========================================
+   IMAGE DISPLAY
+   ========================================= */
+#item-display{
+    position: relative;
+    top: 10px; /* Pushes the display down to clear the header */
+}
+
+#item-display img {
+    /* REMOVED float: right, fixed 55em widths, and awkward top/right offsets */
+    width: 100%;
+    max-width: 600px; /* Controls how large the image can get */
+    height: auto;     /* Maintains perfect aspect ratio */
+    object-fit: cover;
+    
+    border-radius: 4em;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 40px 0 20px 0;
+    
+    display: block;
+}
+
+/* =========================================
+   DESCRIPTION PARAGRAPH
+   ========================================= */
+#item-display p {
+    /* REMOVED absolute top offsets and floating */
+    width: 100%;
+    max-width: 700px;
+    margin: 20px 0 30px 0;
+    
+    text-align: center;
+    font-family: cursive;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* =========================================
+   BUTTON (ID X)
+   ========================================= */
+#buy_button { 
+    /* REMOVED left percentages and relative positioning traps */
+    display: inline-block;
+    background-color: black;
+    border-radius: 50em;
+    margin-top: 120px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#buy_button a {
+    text-decoration: none;
+    padding: 1em 4em;
+    color: white;
+    display: inline-block;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+#buy_button:hover {
+    background-color: #4A148C;
+    transform: scale(1.05);
+}
+
+/* =========================================
+   FADE-IN ANIMATION
+   ========================================= */
+.fade-in {
+    opacity: 0; 
+    transition: opacity 2s ease; 
+}
+
+.fade-in.show {
+    opacity: 1; 
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (Tablets & Mobile)
+   ========================================= */
+@media only screen and (max-width: 950px) {
+    #container {
+        padding: 30px 15px 80px 15px;
+    }
+    #item-display{
+        top: 120px;
+    }
+    #item-display img {
+        max-width: 100%; /* Scales safely down to phone screens */
+        border-radius: 2em;
+        margin: 20px 0;
+        top:20em;
+    }
+
+    #item-display p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    #X a {
+        padding: 0.8em 2.5em; /* Shrinks button slightly for smaller screens */
+    }
+}

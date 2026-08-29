@@ -1,0 +1,181 @@
+/* =========================================
+   MAIN BODY & BACKGROUND
+   ========================================= */
+#main-body {
+    background-image: url("../Content/img-art/img6.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* 120px top clears header, 20px sides prevents touching edges */
+    padding: 120px 20px 50px; 
+    box-sizing: border-box;
+}
+
+/* =========================================
+   THE WHITE CARD CONTAINER
+   ========================================= */
+.contact1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container-contact1 {
+    width: 100% !important; 
+    max-width: 1000px !important; 
+    background: #ffffff; 
+    border-radius: 20px;
+    padding: 60px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    
+    /* STRICT DESKTOP LAYOUT */
+    display: flex !important;
+    flex-direction: row !important; /* Forces side-by-side */
+    flex-wrap: nowrap !important;   /* Prevents stacking */
+    justify-content: space-between !important; 
+    align-items: center !important;     
+    gap: 40px !important; 
+}
+
+/* --- Left Side: Image --- */
+.contact1-pic {
+    width: 45% !important; 
+    display: flex;
+    justify-content: center;
+}
+
+.contact1-pic img {
+    width: 100%; 
+    max-width: 400px; 
+    height: auto; 
+}
+
+/* --- Right Side: Form --- */
+.contact1-form {
+    width: 50% !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact1-form-title {
+    font-family: cursive;
+    font-size: 2.5rem;
+    color: #333;
+    text-align: left !important; 
+    padding-bottom: 30px;
+}
+
+/* =========================================
+   INPUTS & BUTTON
+   ========================================= */
+.wrap-input1 {
+    width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.input1 {
+    display: block;
+    width: 100%; 
+    background: #e6e6e6;
+    font-family: sans-serif;
+    font-size: 1rem;
+    color: #333;
+    padding: 0 25px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    box-sizing: border-box; 
+}
+
+input.input1 {
+    height: 50px;
+}
+
+textarea.input1 {
+    min-height: 150px;
+    padding-top: 20px; 
+    resize: vertical;
+}
+
+.container-contact1-form-btn {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.contact1-form-btn {
+    background: #b08d57; 
+    color: white;
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact1-form-btn:hover {
+    background: #333;
+    transform: scale(1.05);
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (Tablets & Phones)
+   ========================================= */
+
+@media (max-width: 900px) {
+    .container-contact1 {
+        flex-direction: column !important; /* Forces stack on small screens */
+        padding: 50px 40px;
+    }
+    .contact1-pic {
+        display: none; /* Hides the image on very small screens */
+    }
+    .contact1-pic, 
+    .contact1-form {
+        width: 100% !important; /* Both sides expand to full width */
+    }
+    
+    .contact1-pic {
+        margin-bottom: 30px;
+    }
+    
+    .contact1-form-title {
+        text-align: center !important; /* Centers title when stacked */
+    }
+    
+    .container-contact1-form-btn {
+        justify-content: center !important; 
+    }
+}
+
+@media (max-width: 600px) {
+    .contact1-pic {
+        display: none; /* Hides the image on very small screens */
+    }
+    #main-body {
+        padding: 100px 15px 30px; 
+    }
+    
+    .container-contact1 {
+        padding: 30px 20px; 
+    }
+    
+    .contact1-form-title {
+        font-size: 2rem;
+    }
+    
+    .input1 {
+        padding: 0 15px; 
+    }
+}

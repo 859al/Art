@@ -1,0 +1,53 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+#main-body {
+    background-image: url("../Content/img-art/img6.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    
+    /* ADDED GRID LAYOUT */
+    gap: 40px; /* Space between the boxes */
+    padding: 100px 5px; /* Puts space around the edges of the screen */
+    align-items: start; /* Keeps boxes from stretching vertically */
+}
+
+
+.description {
+    /* Layout & Centering */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    /* Box Sizing & Spacing */
+    width: 90%;
+    max-width: 800px;
+    margin: 100px auto; /* Centers the box horizontally on the screen */
+    padding: 3em;
+    border-radius: 4em; /* Slightly adjusted for a cleaner look, or keep 7em if you prefer */
+    
+    /* Styling */
+    background-color: rgba(114, 78, 36, 0.712);
+    color: white;
+    font-family: cursive;
+    text-align: center;
+    text-shadow: 2px 0 black, 0 2px black, 2px 0 black, 0 2px black;
+}
+    
+    
+    .description li{
+        margin-bottom: 2em;
+        font-weight:bolder;
+        list-style: none;
+    
+    }
+
+
