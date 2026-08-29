@@ -26,6 +26,11 @@ This project is built purely using front-end technologies with no backend depend
 
 ---
 
+## 🤖 Acknowledgments & Disclaimer
+* This project was designed and built with the help of AI assistance for code structuring, styling, and debugging.
+
+---
+
 ## 📂 Project Structure
 
 ```text
