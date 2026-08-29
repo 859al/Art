@@ -4,7 +4,7 @@ Welcome to the **Monate Gallery** project! This is a college web design project 
 
 The primary focus of this project was experimenting with front-end design, immersive layouts, custom CSS animations, and full responsiveness across various screen sizes.
 
-🌐 **Live Website Demo:** [Visit Monate Gallery Online](https://859al.github.io/Art/index)
+🌐 **Live Website Demo:** [Visit Monate Gallery Online](https://859al.github.io/ArtGallery/index)
 
 ---
 
